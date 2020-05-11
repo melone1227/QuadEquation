@@ -13,19 +13,22 @@ def QuadEquation(a, b, c):
         print(x)
         return 0
 
+    ## Dが負のとき
+    if D < 0:
+        print('no solutions')
+        return 0
+
     ## 実数解
     square_D = math.sqrt(D)
     x1 = (-b + square_D) / (2*a)
     x2 = (-b - square_D) / (2*a)
 
-    ## Dの正負で場合分け
+    ## Dの値で場合分け
     if D > 0:
         RealNumberSolution_list.append(x1)
         RealNumberSolution_list.append(x2)
     elif D == 0:
         RealNumberSolution_list.append(x1)
-    else:
-        print('no solutions')
 
     print(RealNumberSolution_list)
     return 0
