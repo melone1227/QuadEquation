@@ -1,4 +1,5 @@
 import math
+import sys
 
 def QuadEquation(a, b, c):
     ## 実数解の要素を格納するリスト
@@ -11,12 +12,12 @@ def QuadEquation(a, b, c):
     if a == 0:
         x = -c/b
         print(x)
-        return 0
+        sys.exit()
 
     ## Dが負のとき
     if D < 0:
         print('no solutions')
-        return 0
+        sys.exit()
 
     ## 実数解
     square_D = math.sqrt(D)
@@ -31,7 +32,7 @@ def QuadEquation(a, b, c):
         RealNumberSolution_list.append(x1)
 
     print(RealNumberSolution_list)
-    return 0
+    sys.exit()
 
 a = float(input('a = '))
 b = float(input('b = '))
